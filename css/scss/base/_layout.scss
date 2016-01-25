@@ -1,0 +1,14 @@
+$bp-lg: 1240px; 
+
+body {
+	font-family: "trebuchet ms", arial, helvetica, sans-serif;
+}
+
+p { margin-top: 0; }
+
+.container {
+	max-width: $bp-lg;
+	margin: 0 auto;
+	padding: 0 rem(16px);
+	box-sizing: border-box;
+}

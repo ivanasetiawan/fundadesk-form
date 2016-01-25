@@ -1,0 +1,111 @@
+// $color-orange: #F8B000;
+// $color-yellow: #FAC74C;
+
+$color-blue: #3888C5; // border
+$color-blue-dark: #256BA1; // btn & link
+$color-white: #f2f2f2;
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    font-weight: 700;
+    margin: 0 0 rem(15px);
+    float: left;
+    white-space: normal;
+    width: 100%;
+    position: relative;
+    
+    @at-root {
+        form > & {
+            height: rem(32px);
+            font-size: rem(24px);
+            border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+            span { line-height: rem(32px); }
+        }
+    }
+    + p { clear: left; }
+    span {
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        
+    }
+}
+
+.ssa-form {
+    padding: rem(20px) 0;
+}
+
+.uploadbox {
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.1);
+    border: dashed 1px rgba(0,0,0,0.5);
+
+    > span { 
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+.uploadbox--leaderboard {
+    width: 728px;
+    height: 90px;
+    line-height: 90px;
+}
+
+.uploadbox__preview {
+    width: 728px;
+    height: 90px;
+}
+
+// Input type file
+.js .uploadbox__input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.uploadbox__input {
+    + label {
+        max-width: 80%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+        display: inline-block;
+        overflow: hidden;
+        padding: rem(10px) rem(20px);
+        color: $color-white;
+        background-color: $color-blue;
+        transition: background-color 0.2s;
+        
+        svg {
+            width: 1em;
+            height: 1em;
+            vertical-align: middle;
+            fill: currentColor;
+            margin-top: rem(-3px);
+            margin-right: rem(4px);
+        }
+    }
+
+    &:focus + label,
+    & + label:hover,
+    &.has-focus + label {
+        background-color: $color-blue-dark;
+    }
+
+}
+
+.no-js .uploadbox__input + label {
+    display: none;
+}

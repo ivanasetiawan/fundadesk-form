@@ -19,17 +19,28 @@
     <div class="container">
       <form class="ssa-form">
         <legend><span>Uw advertentie</span></legend>
-        <fieldset>
+        <fieldset data-upload-field class="test">
           <legend>Leaderboard</legend>
           <p>Afmeting 728 x 90 px | max 10 kb. | JPG, JPEG, (animated) GIF</p>
           <div class="uploadbox uploadbox--leaderboard">
             <span>
-              <input type="file" id="fileUploader" name="fileUploader[]" class="uploadbox__input" accept="image/*" multiple="multiple" data-multiple-caption="{count} files selected">
-              <label for="fileUploader" class="uploadbox__label" data-upload-label><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Upload Leaderboard</span></label>
+              <input type="file" id="fileUploader" name="fileUploader[]" class="uploadbox__input" accept="image/*" multiple="multiple" data-multiple-caption="{count} files selected" data-file-uploader>
+              <label for="fileUploader" class="btn uploadbox__label" data-upload-label>
+
+              <svg version="1.1" class="svg-reload" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="17"
+                 viewBox="0 0 214.367 214.367" xml:space="preserve">
+              <path d="M202.403,95.22c0,46.312-33.237,85.002-77.109,93.484v25.663l-69.76-40l69.76-40v23.494
+                c27.176-7.87,47.109-32.964,47.109-62.642c0-35.962-29.258-65.22-65.22-65.22s-65.22,29.258-65.22,65.22
+                c0,9.686,2.068,19.001,6.148,27.688l-27.154,12.754c-5.968-12.707-8.994-26.313-8.994-40.441C11.964,42.716,54.68,0,107.184,0
+                S202.403,42.716,202.403,95.22z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="svg-upload" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg> <span>Upload Leaderboard</span></label>
             </span>
             <div id="preview" class="uploadbox__preview"></div>
           </div>
         </fieldset>
+
+        <button type="submit" id="next" class="btn" data-upload-button disabled>Volgende</button>
       </form>
     </div><!-- /container -->
     <!--<script src="js/custom-input-file.js"></script> -->
